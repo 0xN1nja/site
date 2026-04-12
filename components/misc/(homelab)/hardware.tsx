@@ -48,7 +48,9 @@ export const Hardware = () => {
     <div>
       <h2 className="text-2xl font-bold py-8">Hardware</h2>
       <p className="pb-5 text-zinc-600 dark:text-zinc-400">
-        A mix of machines running different workloads.
+        A mix of machines running different workloads, in a{" "}
+        <span className="font-medium dark:text-white">27U 600x600mm</span>{" "}
+        network rack.
       </p>
       <div className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">

@@ -11,15 +11,14 @@ export const Network = () => {
           </span>
           <span className="text-zinc-600 dark:text-zinc-400">
             Netgear 1100 running pfSense+. Handles DHCP, DNS, firewall rules,
-            and VLANs. All routing logic lives here rather than scattered across
-            consumer firmware.
+            and VLANs.
           </span>
         </div>
         <div>
           <span className="font-medium dark:text-white">Switch: </span>
           <span className="text-zinc-600 dark:text-zinc-400">
-            TP-Link 8-port managed switch. All lab machines are wired through
-            this — predictable latency, no Wi-Fi surprises.
+            TP-Link 8-port managed switch. All machines are connected through
+            this.
           </span>
         </div>
         <div>

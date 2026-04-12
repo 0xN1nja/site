@@ -20,12 +20,6 @@ export const ProxmoxVE = () => {
           Debian and Windows 11
         </span>
       </div>
-      <div className="pb-5">
-        <span className="font-medium dark:text-white">Services: </span>
-        <span className="text-zinc-600 dark:text-zinc-400">
-          Everything self-hosted runs via Docker Compose inside the Debian VM
-        </span>
-      </div>
       <div className="py-3">
         <Image
           src="/images/homelab/proxmox-ve.png"

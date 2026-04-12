@@ -14,9 +14,8 @@ export const ProxmoxBackup = () => {
       </p>
       <p className="pb-5 text-zinc-600 dark:text-zinc-400">
         PBS uses chunk-based deduplication — only changed blocks are written
-        between backups — which makes incremental backups very efficient even on
-        a spinning disk. Restores are checksum-verified and accessible straight
-        from the Proxmox VE UI.
+        between backups. This makes incremental backups very efficient. Restores
+        are checksum-verified and accessible straight from the Proxmox VE UI.
       </p>
       <div className="py-3">
         <Image

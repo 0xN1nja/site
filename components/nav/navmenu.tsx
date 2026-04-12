@@ -15,10 +15,8 @@ import { cn } from "@/lib/utils";
 
 import Image from "next/image";
 
-import anime from "@/public/images/nav/berserk.jpg";
-
-import uses from "@/public/images/nav/uses.webp";
-import work from "@/public/images/nav/work.webp";
+import usesImg from "@/public/images/uses/setup.png";
+import homelabImg from "@/public/images/homelab/grafana.png";
 import NavDrawer from "./nav-drawer";
 
 export function NavMenu() {
@@ -37,12 +35,8 @@ export function NavMenu() {
 
     window.addEventListener("resize", handleResize);
     return () => {
-      // remove event listener when the component is unmounted to not cause any memory leaks
-      // otherwise the event listener will continue to be active
       window.removeEventListener("resize", handleResize);
     };
-    // add `isMobile` state variable as a dependency so that
-    // it is called every time the window is resized
   }, [isMobile]);
 
   return isMobile ? (
@@ -56,18 +50,30 @@ export function NavMenu() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="text-white grid w-[150px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[350px]">
-              {/* <ListItem
-                title=""
-                href="/"
+              <ListItem
+                title="uses"
+                href="/uses"
                 className="relative z-10 hover:text-white hover:opacity-80"
               >
                 <Image
-                  className="absolute object-cover inset-0 w-full h-full -z-40 rounded-md  brightness-50"
-                  src={anime}
-                  alt="anime"
+                  className="absolute object-cover inset-0 w-full h-full -z-40 rounded-md brightness-50"
+                  src={usesImg}
+                  alt="uses"
                   placeholder="blur"
                 />
-              </ListItem> */}
+              </ListItem>
+              <ListItem
+                title="homelab"
+                href="/homelab"
+                className="relative z-10 hover:text-white hover:opacity-80"
+              >
+                <Image
+                  className="absolute object-cover inset-0 w-full h-full -z-40 rounded-md brightness-50"
+                  src={homelabImg}
+                  alt="homelab"
+                  placeholder="blur"
+                />
+              </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -92,7 +98,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none ">{title}</div>
+          <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>

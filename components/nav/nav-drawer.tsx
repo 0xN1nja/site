@@ -8,16 +8,15 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { cn } from "@/lib/utils";
-import anime from "@/public/images/nav/berserk.jpg";
 
-import uses from "@/public/images/nav/uses.webp";
-import work from "@/public/images/nav/work.webp";
 import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
+import usesImg from "@/public/images/uses/setup.png";
+import homelabImg from "@/public/images/homelab/grafana.png";
 
 const NavDrawer = () => {
   return (
@@ -31,7 +30,7 @@ const NavDrawer = () => {
           <DrawerTitle className="flex justify-start pb-0">More</DrawerTitle>
         </DrawerHeader>
         <ul className="text-white grid gap-3 p-4 h-fit grid-cols-2">
-          <DrawerClose asChild>
+          {/* <DrawerClose asChild>
             <ListItem
               title="anime"
               href="/anime"
@@ -44,7 +43,7 @@ const NavDrawer = () => {
                 placeholder="blur"
               />
             </ListItem>
-          </DrawerClose>
+          </DrawerClose> */}
           <DrawerClose asChild>
             <ListItem
               title="uses"
@@ -53,7 +52,7 @@ const NavDrawer = () => {
             >
               <Image
                 className="absolute object-cover inset-0 w-full h-full -z-40 rounded-md  brightness-50"
-                src={uses}
+                src={usesImg}
                 alt="uses"
                 placeholder="blur"
               />
@@ -62,14 +61,14 @@ const NavDrawer = () => {
 
           <DrawerClose asChild>
             <ListItem
-              title="papers"
-              href="/papers"
+              title="homelab"
+              href="/homelab"
               className="relative z-10 hover:text-white hover:opacity-80"
             >
               <Image
                 className="absolute object-cover inset-0 w-full h-full -z-40 rounded-md  brightness-50"
-                src={work}
-                alt="papers"
+                src={homelabImg}
+                alt="homelab"
                 placeholder="blur"
               />
             </ListItem>

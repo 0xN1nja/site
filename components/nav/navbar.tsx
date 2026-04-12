@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import { NavMenu } from "./navmenu";
+import { NavMenu } from "./navmenu";
 
 type navItems = {
   name: string;
@@ -15,7 +15,6 @@ const navItems: navItems = [
   { name: "work", href: "/work" },
   { name: "projects", href: "/projects" },
   { name: "blogs", href: "/blogs" },
-  { name: "uses", href: "/uses" },
 ];
 
 const NavBar = () => {
@@ -47,7 +46,7 @@ const NavBar = () => {
             </Link>
           </div>
         ))}
-        {/* <NavMenu /> */}
+        <NavMenu />
       </nav>
     </div>
   );

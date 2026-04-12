@@ -22,7 +22,7 @@ export const ProxmoxVE = () => {
       </div>
       <div className="py-3">
         <Image
-          src="/images/homelab/proxmox-ve.png"
+          src="/images/homelab/proxmox-ve.webp"
           alt="Proxmox VE dashboard"
           width={900}
           height={520}

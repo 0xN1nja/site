@@ -38,7 +38,7 @@ export const Network = () => {
       </div>
       <div className="py-3">
         <Image
-          src="/images/homelab/netgear-1100.jpeg"
+          src="/images/homelab/netgear-1100.webp"
           alt="Netgear 1100 running pfSense+"
           width={900}
           height={600}

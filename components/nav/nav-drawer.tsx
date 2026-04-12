@@ -16,7 +16,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import usesImg from "@/public/images/uses/setup.png";
-import homelabImg from "@/public/images/homelab/grafana.png";
+import homelabImg from "@/public/images/homelab/grafana.webp";
 
 const NavDrawer = () => {
   return (

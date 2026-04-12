@@ -24,7 +24,7 @@ export const Monitoring = () => {
       </p>
       <div className="py-3">
         <Image
-          src="/images/homelab/grafana.png"
+          src="/images/homelab/grafana.webp"
           alt="Grafana monitoring dashboard"
           width={900}
           height={520}

@@ -19,7 +19,7 @@ export const ProxmoxBackup = () => {
       </p>
       <div className="py-3">
         <Image
-          src="/images/homelab/proxmox-bakup-server.png"
+          src="/images/homelab/proxmox-bakup-server.webp"
           alt="Proxmox Backup Server dashboard"
           width={900}
           height={520}

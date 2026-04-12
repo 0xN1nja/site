@@ -29,7 +29,7 @@ export const MediaStack = () => {
         The flow: request on Overseerr → Radarr or Sonarr picks it up → Prowlarr
         finds a source → SABnzbd or qBittorrent downloads it → the *arr app
         renames and moves it to the media library → Plex and Jellyfin see it
-        automatically. Nothing manual.
+        automatically.
       </p>
       <div className="overflow-x-auto pb-5">
         <table className="w-full text-sm border-collapse">
@@ -58,7 +58,7 @@ export const MediaStack = () => {
       </div>
       <div className="py-3">
         <Image
-          src="/images/homelab/homepage-media.png"
+          src="/images/homelab/homepage-media.webp"
           alt="Media services dashboard"
           width={900}
           height={520}

@@ -64,7 +64,7 @@ export const OtherServices = () => {
       </div>
       <div className="py-3">
         <Image
-          src="/images/homelab/homepage-services.png"
+          src="/images/homelab/homepage-services.webp"
           alt="Services dashboard"
           width={900}
           height={520}
@@ -73,7 +73,7 @@ export const OtherServices = () => {
       </div>
       <div className="py-3 pb-8">
         <Image
-          src="/images/homelab/homepage-bookmarks.png"
+          src="/images/homelab/homepage-bookmarks.webp"
           alt="Bookmarks dashboard"
           width={900}
           height={520}

@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 import usesImg from "@/public/images/uses/setup.png";
-import homelabImg from "@/public/images/homelab/grafana.png";
+import homelabImg from "@/public/images/homelab/grafana.webp";
 import NavDrawer from "./nav-drawer";
 
 export function NavMenu() {

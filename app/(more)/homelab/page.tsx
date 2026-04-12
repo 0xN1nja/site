@@ -14,6 +14,17 @@ import {
 export const metadata: Metadata = {
   title: "0xN1nja // homelab",
   description: "A look at the hardware and software running in my homelab.",
+  openGraph: {
+    title: "0xN1nja // homelab",
+    description: "A look at the hardware and software running in my homelab.",
+    images: ["https://0xn1nja.dev/api/og?title=Homelab"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "0xN1nja // homelab",
+    description: "A look at the hardware and software running in my homelab.",
+    images: ["https://0xn1nja.dev/api/og?title=Homelab"],
+  },
 };
 
 const HomelabPage = () => {

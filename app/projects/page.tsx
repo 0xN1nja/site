@@ -4,6 +4,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "0xN1nja // projects",
   description: "A showcase of my projects and work.",
+  openGraph: {
+    title: "0xN1nja // projects",
+    description: "A showcase of my projects and work.",
+    images: ["https://0xn1nja.dev/api/og?title=Projects"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "0xN1nja // projects",
+    description: "A showcase of my projects and work.",
+    images: ["https://0xn1nja.dev/api/og?title=Projects"],
+  },
 };
 
 type Project = {

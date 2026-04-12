@@ -8,6 +8,17 @@ import React from "react";
 export const metadata: Metadata = {
   title: "0xN1nja // blogs",
   description: "blogs I guess.",
+  openGraph: {
+    title: "0xN1nja // blogs",
+    description: "blogs I guess.",
+    images: ["https://0xn1nja.dev/api/og?title=Blogs"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "0xN1nja // blogs",
+    description: "blogs I guess.",
+    images: ["https://0xn1nja.dev/api/og?title=Blogs"],
+  },
 };
 
 const blogsPage = () => {

@@ -4,6 +4,17 @@ import type { Metadata } from "next/types";
 export const metadata: Metadata = {
   title: "0xN1nja // uses",
   description: "A list of software and hardware that I use.",
+  openGraph: {
+    title: "0xN1nja // uses",
+    description: "A list of software and hardware that I use.",
+    images: ["https://0xn1nja.dev/api/og?title=Uses"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "0xN1nja // uses",
+    description: "A list of software and hardware that I use.",
+    images: ["https://0xn1nja.dev/api/og?title=Uses"],
+  },
 };
 
 const usesPage = () => {

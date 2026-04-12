@@ -15,7 +15,7 @@ const info = {
   name: "0xN1nja",
   twitter: "@0xN1nja",
   description: "18yo Software Engineer",
-  url: "https://github.com/0xN1nja",
+  url: "https://0xn1nja.dev",
   image: "/meta/og.jpg",
 };
 

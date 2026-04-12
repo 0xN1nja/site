@@ -11,7 +11,7 @@ const Home = () => {
         </h1>
       </div>
       <div className="max-w-[58ch] text-zinc-600 dark:text-zinc-400">
-        18yo Software Engineer
+        19 / software engineer
       </div>
       <Intro />
       <GridCards />

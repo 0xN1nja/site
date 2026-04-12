@@ -5,7 +5,7 @@ import { DesignAndColors } from "@/components/misc/(uses)/design-colors";
 import { MyLogo } from "@/components/misc/(uses)/my-logo";
 import { Typography } from "@/components/misc/(uses)/typography";
 
-import setup from "@/public/images/uses/setup.png";
+import setup from "@/public/images/uses/setup.webp";
 
 export const AllTabs = () => {
   return (

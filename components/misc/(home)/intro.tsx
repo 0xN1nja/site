@@ -22,8 +22,14 @@ export const Intro = () => {
         </p>
         <p>
           My interests include MLOps, Systems-programming, Low-level dev and
-          Full-stack dev. I also do DevOps, Networking and Sysadmin stuff for my
-          Homelab.
+          Full-stack dev. I also do DevOps, Networking and Sysadmin stuff for my{" "}
+          <Link
+            className="link text-black dark:text-white/95 underline-offset-auto underline"
+            href="/homelab"
+          >
+            Homelab
+          </Link>
+          .
         </p>
         <p>
           I love simplicity and a great admirer of Unix philosophy, minimalism

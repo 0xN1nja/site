@@ -13,7 +13,7 @@ export function Characters({
   style,
   ...props
 }: CharactersProps) {
-  const characters = useMemo(() => [...(children ?? "")], [children]);
+  const characters = useMemo(() => Array.from(children ?? ""), [children]);
 
   return (
     <span aria-label={children} role="text">

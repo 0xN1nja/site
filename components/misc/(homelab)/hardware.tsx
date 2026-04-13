@@ -1,6 +1,6 @@
 const hardwareData = [
   {
-    device: "Netgear 1100",
+    device: "Netgate 1100",
     role: "Router / Firewall",
     specs: "1 GB RAM",
     os: "pfSense+",

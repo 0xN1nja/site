@@ -18,8 +18,6 @@ const Identifier = async () => {
 };
 
 export const submitForm = async (email: string, message: string) => {
-  // TODO: use a token to verify email id provided, and only then dispatch the webhook.
-
   if (!WEBHOOK_URL) {
     console.warn(
       "Discord webhook URL not configured, skipping form submission.",

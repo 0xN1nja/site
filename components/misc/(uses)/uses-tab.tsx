@@ -40,12 +40,13 @@ const tabContent: Record<TabKey, React.ReactNode> = {
 
 export const UsesTabs = () => {
   const hasMounted = useHasMounted();
-  //@ts-ignore
   const [currentTab, setCurrentTab] = useState<TabKey>(() => {
     try {
       const tabId = (window.location.hash || "#").substring(1);
       return tabs.some((tab) => tab.id === tabId) ? (tabId as TabKey) : "all";
-    } catch (error) {}
+    } catch {
+      return "all";
+    }
   });
 
   useEffect(() => {

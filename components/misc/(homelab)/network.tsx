@@ -10,7 +10,7 @@ export const Network = () => {
             Router / Firewall:{" "}
           </span>
           <span className="text-zinc-600 dark:text-zinc-400">
-            Netgear 1100 running pfSense+. Handles DHCP, DNS, firewall rules,
+            Netgate 1100 running pfSense+. Handles DHCP, DNS, firewall rules,
             and VLANs.
           </span>
         </div>
@@ -38,8 +38,8 @@ export const Network = () => {
       </div>
       <div className="py-3">
         <Image
-          src="/images/homelab/netgear-1100.webp"
-          alt="Netgear 1100 running pfSense+"
+          src="/images/homelab/netgate-1100.webp"
+          alt="Netgate 1100 running pfSense+"
           width={900}
           height={600}
           className="w-full h-auto"

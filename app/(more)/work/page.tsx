@@ -28,7 +28,8 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    company: "<b>Coldran</b>",
+    company:
+      '<b><a href="https://coldran.com" target="_blank" rel="noopener noreferrer" class="link">Coldran</a></b>',
     logo: "/images/work/coldran.webp",
     role: "Co-Founder",
     period: "Sep 2025 - Present",
@@ -38,7 +39,8 @@ const experiences: Experience[] = [
     ],
   },
   {
-    company: "<b>Google Developer Groups</b>",
+    company:
+      '<b><a href="https://github.com/GDSC-Manipal-University-Jaipur" target="_blank" rel="noopener noreferrer" class="link">Google Developer Groups</a></b>',
     logo: "/images/work/gdg.webp",
     role: "Working Team",
     period: "Nov 2025 - Present",

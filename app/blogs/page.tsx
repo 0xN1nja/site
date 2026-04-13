@@ -31,11 +31,11 @@ const blogsPage = () => {
           <h1 className="text-2xl font-bold pb-8">Blogs</h1>
           <p>
             I write about things I learn, projects I work on, and other cool
-            stuff. Follow on
+            stuff. Follow on{" "}
             <a
               href="http://x.com/0xN1nja"
               target="_blank"
-              className="link mx-1"
+              className="link"
               rel="noreferrer"
             >
               X

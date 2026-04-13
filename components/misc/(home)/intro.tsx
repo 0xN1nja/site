@@ -6,9 +6,9 @@ export const Intro = () => {
     <section className="mt-8 text-zinc-600 dark:text-zinc-400">
       <div className="space-y-5">
         <p>
-          Hi, I'm Abhimanyu (known as
+          Hi, I'm Abhimanyu (known as{" "}
           <a
-            className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
+            className="link text-black dark:text-white/95 underline-offset-auto underline"
             href="https://www.github.com/0xN1nja"
           >
             0xN1nja

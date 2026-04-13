@@ -3,13 +3,32 @@ import type { NextRequest } from "next/server";
 
 export const runtime = "edge";
 
+function arrayBufferToBase64(buffer: ArrayBuffer): string {
+  const bytes = new Uint8Array(buffer);
+  let binary = "";
+  const chunkSize = 8192;
+  for (let i = 0; i < bytes.byteLength; i += chunkSize) {
+    binary += String.fromCharCode(
+      ...Array.from(bytes.subarray(i, i + chunkSize)),
+    );
+  }
+  return btoa(binary);
+}
+
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const postTitle = searchParams.get("title");
-  const font = fetch(
-    new URL("../../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
-  const fontData = await font;
+
+  const [fontData, bgImageData] = await Promise.all([
+    fetch(
+      new URL("../../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url),
+    ).then((res) => res.arrayBuffer()),
+    fetch(new URL("../../../public/meta/og.jpg", import.meta.url)).then((res) =>
+      res.arrayBuffer(),
+    ),
+  ]);
+
+  const bgDataUrl = `data:image/jpeg;base64,${arrayBufferToBase64(bgImageData)}`;
 
   return new ImageResponse(
     <div
@@ -19,14 +38,35 @@ export async function GET(req: NextRequest) {
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
-        justifyContent: "center",
-        backgroundImage: "url(https://0xn1nja.dev/meta/og.jpg)",
+        justifyContent: "space-between",
+        backgroundImage: `url(${bgDataUrl})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        padding: "80px 100px",
       }}
     >
       <div
+        style={{ display: "flex", width: "100%", justifyContent: "flex-end" }}
+      >
+        <div
+          style={{
+            display: "flex",
+            fontSize: 48,
+            fontFamily: "Kaisei Tokumin",
+            fontStyle: "normal",
+            color: "white",
+            letterSpacing: "-0.02em",
+            textShadow: "0 0 40px rgba(255,255,255,0.6)",
+            borderBottom: "2px solid rgba(255,255,255,0.5)",
+            paddingBottom: 4,
+          }}
+        >
+          0xN1nja
+        </div>
+      </div>
+
+      <div
         style={{
-          marginLeft: 100,
-          marginRight: 100,
           display: "flex",
           fontSize: 130,
           fontFamily: "Kaisei Tokumin",
@@ -38,6 +78,21 @@ export async function GET(req: NextRequest) {
         }}
       >
         {postTitle}
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          fontSize: 38,
+          fontFamily: "Kaisei Tokumin",
+          fontStyle: "normal",
+          color: "white",
+          letterSpacing: "0.04em",
+          borderBottom: "2px solid rgba(255,255,255,0.5)",
+          paddingBottom: 4,
+        }}
+      >
+        19 / software engineer
       </div>
     </div>,
     {

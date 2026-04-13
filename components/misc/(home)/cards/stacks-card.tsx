@@ -74,16 +74,14 @@ const Marquee = (props: MarqueeProps) => {
       data-testid="marquee"
       style={{
         maskImage: fade
-          ? `linear-gradient(${
-              ifToRightOrToBottom(direction)
-              // direction === "left" ? "to right" : "to bottom"
-            }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
+          ? `linear-gradient(${ifToRightOrToBottom(
+              direction,
+            )}, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
           : undefined,
         WebkitMaskImage: fade
-          ? `linear-gradient(${
-              ifToRightOrToBottom(direction)
-              // direction === "left" ? "to right" : "to bottom"
-            }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
+          ? `linear-gradient(${ifToRightOrToBottom(
+              direction,
+            )}, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
           : undefined,
       }}
     >

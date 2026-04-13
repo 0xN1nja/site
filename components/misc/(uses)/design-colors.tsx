@@ -1,5 +1,12 @@
-//@ts-ignore
-const ColorSquare = ({ className, children }) => {
+import type { ReactNode } from "react";
+
+const ColorSquare = ({
+  className,
+  children,
+}: {
+  className: string;
+  children: ReactNode;
+}) => {
   return (
     <div
       className={`aspect-square flex flex-col items-center justify-center w-full select-none font-medium text-sm ${className}`}

@@ -3,34 +3,15 @@ import type { NextRequest } from "next/server";
 
 export const runtime = "edge";
 
-function arrayBufferToBase64(buffer: ArrayBuffer): string {
-  const bytes = new Uint8Array(buffer);
-  let binary = "";
-  const chunkSize = 8192;
-  for (let i = 0; i < bytes.byteLength; i += chunkSize) {
-    binary += String.fromCharCode(
-      ...Array.from(bytes.subarray(i, i + chunkSize)),
-    );
-  }
-  return btoa(binary);
-}
-
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const postTitle = searchParams.get("title");
 
-  const [fontData, bgImageData] = await Promise.all([
-    fetch(
-      new URL("../../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url),
-    ).then((res) => res.arrayBuffer()),
-    fetch(new URL("../../../public/meta/og.jpg", import.meta.url)).then((res) =>
-      res.arrayBuffer(),
-    ),
-  ]);
+  const fontData = await fetch(
+    new URL("../../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url),
+  ).then((res) => res.arrayBuffer());
 
-  const bgDataUrl = `data:image/jpeg;base64,${arrayBufferToBase64(bgImageData)}`;
-
-  return new ImageResponse(
+  const image = new ImageResponse(
     <div
       style={{
         height: "100%",
@@ -39,30 +20,26 @@ export async function GET(req: NextRequest) {
         flexDirection: "column",
         alignItems: "flex-start",
         justifyContent: "space-between",
-        backgroundImage: `url(${bgDataUrl})`,
+        backgroundImage: "url(https://0xn1nja.dev/meta/og.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         padding: "80px 100px",
       }}
     >
       <div
-        style={{ display: "flex", width: "100%", justifyContent: "flex-end" }}
+        style={{
+          display: "flex",
+          fontSize: 48,
+          fontFamily: "Kaisei Tokumin",
+          fontStyle: "normal",
+          color: "white",
+          letterSpacing: "-0.02em",
+          textShadow: "0 0 40px rgba(255,255,255,0.6)",
+          borderBottom: "2px solid rgba(255,255,255,0.5)",
+          paddingBottom: 4,
+        }}
       >
-        <div
-          style={{
-            display: "flex",
-            fontSize: 48,
-            fontFamily: "Kaisei Tokumin",
-            fontStyle: "normal",
-            color: "white",
-            letterSpacing: "-0.02em",
-            textShadow: "0 0 40px rgba(255,255,255,0.6)",
-            borderBottom: "2px solid rgba(255,255,255,0.5)",
-            paddingBottom: 4,
-          }}
-        >
-          0xN1nja
-        </div>
+        0xN1nja
       </div>
 
       <div
@@ -107,4 +84,11 @@ export async function GET(req: NextRequest) {
       ],
     },
   );
+
+  return new Response(image.body, {
+    headers: {
+      "Content-Type": "image/png",
+      "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
+    },
+  });
 }

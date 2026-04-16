@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "check:preview": "prettier . --check",
-    "check:write": "prettier . --write"
+    "check:write": "prettier . --write",
+    "generate:og": "node scripts/generate-og.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

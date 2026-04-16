@@ -23,7 +23,7 @@ export async function generateMetadata({
   } = post.metadata;
   const ogImage = image
     ? `https://0xn1nja.dev/${image}`
-    : `https://0xn1nja.dev/api/og?title=${title}`;
+    : `https://0xn1nja.dev/og/blog-${post.slug}.png`;
 
   return {
     title,
@@ -76,7 +76,7 @@ export default async function Blog({
             description: post.metadata.summary,
             image: post.metadata.image
               ? `https://0xn1nja.dev${post.metadata.image}`
-              : `https://0xn1nja.dev/api/og?title=${post.metadata.title}`,
+              : `https://0xn1nja.dev/og/blog-${post.slug}.png`,
             url: `https://0xn1nja.dev/writing/${post.slug}`,
             author: {
               "@type": "Person",

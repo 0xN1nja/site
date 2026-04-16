@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "0xN1nja // uses",
     description: "A list of software and hardware that I use.",
-    images: ["https://0xn1nja.dev/api/og?title=Uses"],
+    images: ["https://0xn1nja.dev/og/uses.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "0xN1nja // uses",
     description: "A list of software and hardware that I use.",
-    images: ["https://0xn1nja.dev/api/og?title=Uses"],
+    images: ["https://0xn1nja.dev/og/uses.png"],
   },
 };
 

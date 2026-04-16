@@ -5,6 +5,7 @@ import { Footer } from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 import { ThemeProvider } from "@/components/misc/(theme)/theme-provider";
 import { Analytics } from "@/components/misc/analytics";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
 import gradientImg from "@/public/images/gradient.webp";
 import Image from "next/image";
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: ChildrenProps) {
           </div>
           <Toaster />
         </ThemeProvider>
+        <VercelAnalytics />
       </body>
       <Analytics />
       <link

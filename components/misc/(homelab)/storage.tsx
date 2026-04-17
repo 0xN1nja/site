@@ -8,8 +8,8 @@ export const Storage = () => {
         not crunching numbers, so it holds up fine)
       </p>
       <p className="pb-5 text-zinc-600 dark:text-zinc-400">
-        Unraid&apos;s lets you mix drive sizes and add disks one at a time, with
-        a single parity drive protecting against one disk failure. The array
+        Unraid lets you mix drive sizes and add disks one at a time, with a
+        single parity drive protecting against one disk failure. The array
         handles media and long-term storage; an SSD cache pool takes fast writes
         and flushes them to the array overnight. Everything is shared over
         SMB/NFS to the rest of the network.

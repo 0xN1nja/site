@@ -62,6 +62,31 @@ export const OtherServices = () => {
           </tbody>
         </table>
       </div>
+      <p className="py-4 text-zinc-600 dark:text-zinc-400">
+        All services are surfaced through{" "}
+        <a
+          href="https://gethomepage.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link"
+        >
+          Homepage
+        </a>
+        , a self-hosted dashboard that aggregates service status, stats, and
+        bookmarks in one place.
+      </p>
+      <p className="pb-4 text-zinc-600 dark:text-zinc-400">
+        If you want to automate building Homepage&apos;s YAML config, check out{" "}
+        <a
+          href="https://github.com/0xN1nja/homepagectl"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link"
+        >
+          homepagectl
+        </a>
+        , a tool I built for that.
+      </p>
       <div className="py-3">
         <Image
           src="/images/homelab/homepage-services.webp"

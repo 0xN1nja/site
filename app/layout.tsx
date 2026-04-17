@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 const info = {
   name: "0xN1nja",
   twitter: "@0xN1nja",
-  description: "18yo Software Engineer",
+  description: "19 / software engineer",
   url: "https://0xn1nja.dev",
   image: "/meta/og.jpg",
 };

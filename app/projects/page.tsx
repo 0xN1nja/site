@@ -28,56 +28,84 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "lmc_emulator",
+    title: "homepagectl",
     description:
-      "A Little Man Computer (LMC) emulator built in Rust, providing a virtual environment to execute and debug LMC assembly programs.",
-    liveLink: "",
-    githubLink: "https://github.com/0xN1nja/lmc_emulator",
+      "Generate gethomepage.dev configs from running Docker containers.",
+    githubLink: "https://github.com/0xN1nja/homepagectl",
+    techStack: ["Go"],
+    year: "2026",
+  },
+  {
+    title: "fahhh",
+    description: "Plays FAHHH every time you mistype a command.",
+    githubLink: "https://github.com/0xN1nja/fahhh",
+    techStack: ["Shell"],
+    year: "2026",
+  },
+  {
+    title: "watch-my-git",
+    description: "Get notified when someone unfollows you on GitHub.",
+    githubLink: "https://github.com/0xN1nja/watch-my-git",
     techStack: ["Rust"],
-    year: "2023",
+    year: "2026",
   },
   {
-    title: "dotfiles",
-    description:
-      "My personal Arch Linux configuration files and system setup. Includes my window manager (bspwm) configurations, shell scripts, terminal themes, and productivity tools for a streamlined development environment. Features automated installation scripts for quick system setup.",
-    liveLink: "",
-    githubLink: "https://github.com/0xN1nja/dotfiles",
-    techStack: ["Arch Linux", "Shell"],
-    year: "2024",
-  },
-  {
-    title: "urban-dictionary-api",
-    description:
-      "A robust Python API for scraping and retrieving definitions from Urban Dictionary. Provides programmatic access to slang definitions, examples, and metadata.",
-    liveLink: "",
-    githubLink: "https://github.com/0xN1nja/urban-dictionary-api",
-    techStack: ["Python", "Flask", "Beautiful Soup"],
-    year: "2021",
-  },
-  {
-    title: "rusty-os",
-    description: "An x86 kernel written in Rust.",
-    liveLink: "",
-    githubLink: "https://github.com/0xN1nja/rusty-os",
+    title: "chip8_emulator",
+    description: "CHIP-8 Emulator written in Rust.",
+    githubLink: "https://github.com/0xN1nja/chip8_emulator",
     techStack: ["Rust"],
-    year: "2024",
+    year: "2026",
+  },
+  {
+    title: "kumaseerr",
+    description:
+      "Automatically sync running Docker containers with Uptime Kuma.",
+    githubLink: "https://github.com/0xN1nja/kumaseerr",
+    techStack: ["Python"],
+    year: "2026",
   },
   {
     title: "dockexclude",
     description:
-      "A Docker Compose tool that provides selective service execution capabilities. Allows users to exclude specific services from their Docker Compose stack, making it easier to manage complex multi-service applications and optimize development workflows.",
-    liveLink: "",
+      "Manage your Docker Compose stack with the ability to exclude services.",
     githubLink: "https://github.com/0xN1nja/dockexclude",
     techStack: ["Go"],
     year: "2026",
   },
   {
     title: "gdav",
-    description: "A CalDAV and CardDAV client for Gleam.",
-    liveLink: "",
+    description: "CalDAV and CardDAV client for Gleam.",
     githubLink: "https://github.com/0xN1nja/gdav",
     techStack: ["Gleam"],
     year: "2026",
+  },
+  {
+    title: "archinstall",
+    description: "Script for a minimal Arch Linux installation.",
+    githubLink: "https://github.com/0xN1nja/archinstall",
+    techStack: ["Shell"],
+    year: "2026",
+  },
+  {
+    title: "dotfiles",
+    description: "My Arch Linux dotfiles.",
+    githubLink: "https://github.com/0xN1nja/dotfiles",
+    techStack: ["Shell"],
+    year: "2024",
+  },
+  {
+    title: "lmc_emulator",
+    description: "LMC Emulator written in Rust.",
+    githubLink: "https://github.com/0xN1nja/lmc_emulator",
+    techStack: ["Rust"],
+    year: "2023",
+  },
+  {
+    title: "rusty-os",
+    description: "An x86 kernel written in Rust.",
+    githubLink: "https://github.com/0xN1nja/rusty-os",
+    techStack: ["Rust"],
+    year: "2023",
   },
 ];
 

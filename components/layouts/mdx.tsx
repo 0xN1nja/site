@@ -133,6 +133,18 @@ function Code({
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
+function Pre({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <pre className="bg-neutral-100 dark:bg-neutral-900 rounded-lg p-4 overflow-x-auto mb-4">
+      {children}
+    </pre>
+  );
+}
+
 function slugify(str: string) {
   return str
     .toString()
@@ -178,6 +190,7 @@ const components = {
   ConsCard,
   StaticTweet: TweetComponent,
   code: Code,
+  pre: Pre,
   Table,
 };
 

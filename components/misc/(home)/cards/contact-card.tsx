@@ -72,7 +72,7 @@ const ContactCard = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="hi@0xn1nja.dev" {...field} />
+                    <Input placeholder="your email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

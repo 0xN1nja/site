@@ -79,7 +79,7 @@ export const Intro = () => {
         or drop an
         <a
           className="link text-black dark:text-white/95 ml-1 underline-offset-auto underline"
-          href="mailto:0xN1nja@proton.me"
+          href="mailto:hi@0xn1nja.dev"
         >
           email
         </a>

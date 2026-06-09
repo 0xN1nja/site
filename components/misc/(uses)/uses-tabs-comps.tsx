@@ -42,6 +42,10 @@ const EverydayTabData = [
     desc: "Apple Watch Series 9",
   },
   {
+    key: "Headphones",
+    desc: "AirPods Max (USB-C)",
+  },
+  {
     key: "Earphones",
     desc: "AirPods Pro 2",
   },
